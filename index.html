@@ -1,0 +1,111 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart House</title>
+    <link rel="icon" type="image/x-icon" href="/assets/images/home.svg" />
+    <link rel="stylesheet" type="text/css" href="./assets/styles/style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body class="bg">
+    <div id="main-container">
+      <!-- BUTTON in header -->
+      <div id="header-container" class="header-container">
+        <button id="open-modal-button" class="home-button">
+          <img src="./assets/images/home.svg" alt="Home" />
+        </button>
+        <div id="temperature-container" class="temperature-container">
+          <p>Temerature inside</p>
+          <p>24</p>
+        </div>
+      </div>
+      <!-- MODAL -->
+      <div id="menu-controller" class="hidden modal">
+        <div class="modal-content">
+          <!-- <span class="close">&times;</span> -->
+          <div class="home-controller">
+            <div class="button-container">
+              <!-- Row 1 -->
+              <button class="home-button">
+                <img src="./assets/images/home.svg" alt="Home" />
+              </button>
+              <button class="control-button"></button>
+              <button class="control-button"></button>
+              <button class="control-button">
+                <img src="./assets/images/buttons/oven.jpg" alt="Oven" />
+              </button>
+
+              <!-- Row 2 -->
+              <button class="control-button">
+                <img src="./assets/images/buttons/wifi.jpg" alt="WiFi" />
+              </button>
+              <button class="control-button">
+                <img src="./assets/images/buttons/door.jpg" alt="Door" />
+              </button>
+              <button class="control-button">
+                <img
+                  src="./assets/images/buttons/temperature.jpg"
+                  alt="Temperature"
+                />
+              </button>
+              <button class="control-button">
+                <img src="./assets/images/buttons/light.jpg" alt="Lights" />
+              </button>
+
+              <!-- Row 3 -->
+              <button class="control-button">
+                <img src="./assets/images/buttons/tv.jpg" alt="TV" />
+              </button>
+              <button class="control-button">
+                <img src="./assets/images/buttons/coffee.jpg" alt="Coffee" />
+              </button>
+              <button class="control-button">
+                <img src="./assets/images/buttons/player.jpg" alt="Player" />
+              </button>
+              <button class="control-button">
+                <img src="./assets/images/buttons/water.jpg" alt="Water" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div id="controller-container">
+          <img src="./assets/images/ipad.png" alt="ipad" />
+        </div> -->
+      <!-- </div> -->
+      <div>
+        <!-- <div class="image-container">
+          <img class="action" src="./assets/images/coffee.png" alt="coffee" />
+        </div>
+        <div class="image-container">
+          <img
+            class="action"
+            src="./assets/images/temperature1.png"
+            alt="temperature"
+          />
+        </div>
+        <div class="image-container">
+          <img class="action" src="./assets/images/lights.png" alt="lights" />
+        </div>
+        <div class="image-container">
+          <img class="action" src="./assets/images/door.png" alt="door" />
+        </div>
+        <div class="image-container">
+          <img class="action" src="./assets/images/volume.png" alt="volume" />
+        </div>
+        <div class="image-container">
+          <img class="action" src="./assets/images/water.png" alt="water" />
+        </div> -->
+      </div>
+      <div></div>
+    </div>
+  </body>
+  <!-- <script type="module" src="./assets/scripts/main.js"></script> -->
+  <script src="./assets/scripts/ModalController.js" defer></script>
+  <script src="./assets/scripts/main.js" defer></script>
+</html>

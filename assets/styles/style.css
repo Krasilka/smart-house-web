@@ -1,0 +1,172 @@
+body,
+html {
+  height: 100%;
+}
+
+.bg {
+  /* The image used */
+  background-image: url('/mainBackground.jpeg');
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.image-container {
+  position: relative;
+  width: 100px; /* Adjust the width as needed */
+  margin: 0;
+  padding: 0;
+}
+
+.image-container img {
+  /* height: 30%; */
+  /* position: absolute; */
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 8px 8px rgb(255, 255, 255);
+}
+
+#controller-container {
+  background-color: red;
+}
+#controller-container img {
+  max-width: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+#main-container {
+}
+
+
+
+.header-container {
+  display: flex;
+}
+
+.temperature-container {
+  margin-left: 10%;
+  margin-top: 0px;
+  margin-bottom: 0;
+}
+
+/* Style for the modal container */
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Style for the modal content */
+.modal-content {
+  /* background-color: #fefefe; */
+  border: 1px solid #000000;
+  width: 350px;
+  height: 280px;
+  /* Add background image property */
+  background-image: url('/assets/images/ipad.png');
+  /* Set background image size and other properties */
+  background-size: 150%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+  border-width: 2px;
+}
+
+/* Reset some default styles for buttons */
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+/* Styles for the button container */
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 31px;
+  gap: 2px; /* Adjust the gap between buttons */
+  border: 50px;
+  border-color: #000000;
+}
+
+/* Styles for the square-shaped buttons */
+.control-button {
+  width: 60px; /* Set the width of the square button */
+  height: 60px; /* Set the height of the square button */
+  background-color: #757575;
+  border-radius: 4px; /* Optional: Add border-radius for rounded corners */
+  margin: 5px; /* Adjust the margin around each button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+}
+
+.control-button img {
+  width: 100%; 
+  height: 100%; 
+  /* border-radius: 50%; Optional: Add border-radius for rounded images */
+}
+
+/* Style for inactive button */
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.home-button {
+  width: 60px; /* Set the width of the square button */
+  height: 60px; /* Set the height of the square button */
+  background-color: none;
+  border-radius: 4px; /* Optional: Add border-radius for rounded corners */
+  margin: 5px; /* Adjust the margin around each button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#open-modal-button {
+  background-color: rgb(192,177,168);
+  padding: 5px;
+  border: 0.5px solid #000000;
+}
+
+/* Style for the close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
