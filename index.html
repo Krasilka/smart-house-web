@@ -4,6 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Smart House</title>
     <link rel="icon" type="image/x-icon" href="/assets/images/home.svg" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" type="text/css" href="./assets/styles/style.css" />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
@@ -16,7 +22,12 @@
     <div id="main-container">
       <!-- BUTTON in header -->
       <div id="header-container" class="header-container">
-        <button id="open-modal-button" class="home-button">
+        <button
+          type="button"
+          data-bs-toggle="button"
+          id="open-modal-button"
+          class="btn btn-outline-light home-button"
+        >
           <img src="./assets/images/home.svg" alt="Home" />
         </button>
         <div id="temperature-container" class="temperature-container">
@@ -25,7 +36,7 @@
         </div>
       </div>
       <!-- MODAL -->
-      <div id="menu-controller" class="hidden modal">
+      <div id="menu-controller" class="hidden modalContainer">
         <div class="modal-content">
           <!-- <span class="close">&times;</span> -->
           <div class="home-controller">
@@ -36,76 +47,155 @@
               </button>
               <button class="control-button"></button>
               <button class="control-button"></button>
-              <button class="control-button">
-                <img src="./assets/images/buttons/oven.jpg" alt="Oven" />
+
+              <button
+                type="button"
+                data-bs-toggle="button"
+                class="btn btn-secondary control-button oven"
+              >
+                <div class="img-container">
+                  <img src="./assets/images/buttons/oven.jpg" alt="Oven" />
+                </div>
               </button>
 
               <!-- Row 2 -->
-              <button class="control-button">
-                <img src="./assets/images/buttons/wifi.jpg" alt="WiFi" />
+              <button
+                type="button"
+                data-bs-toggle="button"
+                class="btn btn-secondary control-button wifi"
+              >
+                <div class="img-container">
+                  <img src="./assets/images/buttons/wifi.jpg" alt="WiFi" />
+                </div>
               </button>
-              <button class="control-button">
-                <img src="./assets/images/buttons/door.jpg" alt="Door" />
+              <button
+                type="button"
+                data-bs-toggle="button"
+                class="btn btn-secondary control-button door"
+              >
+                <div class="img-container">
+                  <img src="./assets/images/buttons/door.jpg" alt="Door" />
+                </div>
               </button>
-              <button class="control-button">
-                <img
-                  src="./assets/images/buttons/temperature.jpg"
-                  alt="Temperature"
-                />
+              <button
+                type="button"
+                data-bs-toggle="button"
+                class="btn btn-secondary control-button temperature"
+              >
+                <div class="img-container">
+                  <img
+                    src="./assets/images/buttons/temperature.jpg"
+                    alt="Temperature"
+                  />
+                </div>
               </button>
-              <button class="control-button">
-                <img src="./assets/images/buttons/light.jpg" alt="Lights" />
+              <button
+                type="button"
+                data-bs-toggle="button"
+                class="btn btn-secondary control-button light"
+              >
+                <div class="img-container">
+                  <img src="./assets/images/buttons/light.jpg" alt="Lights" />
+                </div>
               </button>
 
               <!-- Row 3 -->
-              <button class="control-button">
-                <img src="./assets/images/buttons/tv.jpg" alt="TV" />
+              <button
+                type="button"
+                data-bs-toggle="button"
+                class="btn btn-secondary control-button tv"
+              >
+                <div class="img-container">
+                  <img src="./assets/images/buttons/tv.jpg" alt="TV" />
+                </div>
               </button>
-              <button class="control-button">
-                <img src="./assets/images/buttons/coffee.jpg" alt="Coffee" />
+              <button
+                type="button"
+                data-bs-toggle="button"
+                class="btn btn-secondary control-button coffee"
+              >
+                <div class="img-container">
+                  <img src="./assets/images/buttons/coffee.jpg" alt="Coffee" />
+                </div>
               </button>
-              <button class="control-button">
-                <img src="./assets/images/buttons/player.jpg" alt="Player" />
+              <button
+                type="button"
+                data-bs-toggle="button"
+                class="btn btn-secondary control-button player"
+              >
+                <div class="img-container">
+                  <img src="./assets/images/buttons/player.jpg" alt="Player" />
+                </div>
               </button>
-              <button class="control-button">
-                <img src="./assets/images/buttons/water.jpg" alt="Water" />
+              <button
+                type="button"
+                data-bs-toggle="button"
+                class="btn btn-secondary control-button water"
+              >
+                <div class="img-container">
+                  <img src="./assets/images/buttons/water.jpg" alt="Water" />
+                </div>
               </button>
             </div>
           </div>
         </div>
       </div>
-      <!-- <div id="controller-container">
-          <img src="./assets/images/ipad.png" alt="ipad" />
-        </div> -->
-      <!-- </div> -->
-      <div>
-        <!-- <div class="image-container">
-          <img class="action" src="./assets/images/coffee.png" alt="coffee" />
+
+      <div class="images">
+        <div class="service-container coffee hidden">
+          <!-- <img class="service" src="./assets/images/test.png" alt="coffee" /> -->
+          <!-- <img class="service" src="./assets/images/coffee.png" alt="coffee" /> -->
         </div>
-        <div class="image-container">
+        <div class="service-container temperature hidden">
           <img
-            class="action"
-            src="./assets/images/temperature1.png"
+            class="service"
+            src="./assets/images/temperature.png"
             alt="temperature"
           />
         </div>
-        <div class="image-container">
-          <img class="action" src="./assets/images/lights.png" alt="lights" />
+        <div class="service-container light hidden">
+          <!-- <img class="service" src="./assets/images/lights.png" alt="lights" /> -->
         </div>
-        <div class="image-container">
-          <img class="action" src="./assets/images/door.png" alt="door" />
+        <div class="service-container door hidden">
+          <!-- <img class="service" src="./assets/images/door.png" alt="door" /> -->
         </div>
-        <div class="image-container">
-          <img class="action" src="./assets/images/volume.png" alt="volume" />
+        <div class="service-container water hidden">
+          <!-- <img class="service" src="./assets/images/water.png" alt="water" /> -->
         </div>
-        <div class="image-container">
-          <img class="action" src="./assets/images/water.png" alt="water" />
-        </div> -->
+        <div class="service-container wifi hidden">
+          <!-- <img class="service" src="./assets/images/wifi.png" alt="wifi" /> -->
+        </div>
+        <div class="service-container oven hidden">
+          <!-- <img class="service" src="./assets/images/oven.png" alt="oven" /> -->
+        </div>
       </div>
-      <div></div>
+      <div class="service-container player hidden">
+        <!-- <img class="service" src="./assets/images/volume.png" alt="player" /> -->
+        <div id="music-player" class="media">
+          <audio controls>
+            <source
+              src="./assets/audio/lzr_feat_bbno__dank_inatra__max_wells_-_uhhh_(zf.fm).mp3"
+              type="audio/mpeg"
+            />
+            <source
+              src="./assets/audio/aap_ferg__madeintyo_-_wam_(zf.fm).mp3"
+              type="audio/mpeg"
+            />
+            <source
+              src="./assets/audio/doja_cat__saweetie_-_best_friend.mp3"
+              type="audio/mpeg"
+            />
+          </audio>
+          <!-- <button id="play">play</button>
+          <button id="pause">pause</button> -->
+        </div>
+      </div>
     </div>
   </body>
-  <!-- <script type="module" src="./assets/scripts/main.js"></script> -->
-  <script src="./assets/scripts/ModalController.js" defer></script>
-  <script src="./assets/scripts/main.js" defer></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+  <script type="module" src="./assets/components/main.js"></script>
 </html>
