@@ -5,6 +5,12 @@ import { switchWater, waterBtn } from './water.js';
 import { switchLight, lightBtn } from './light.js';
 import { switchOven, ovenBtn } from './oven.js';
 import { switchPlayer, playerBtn } from './player.js';
+import { getCurrentWeather } from './weather.js';
+import {
+  switchTemperature,
+  temperatureBtn,
+  switchThermoWidgets,
+} from './temperature.js';
 
 // MODAL
 const modal = $('#menu-controller');
