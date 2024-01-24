@@ -54,12 +54,22 @@ html {
   background-size: 150px;
   background-color: white;
 }
+.service-container.temperature {
+  background: url('/assets/images/temperature.png') no-repeat center;
+  background-size: 150px;
+  background-color: white;
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 15px;
+}
 
 .service-container {
   background-size: auto;
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+  pointer-events: none;
 }
 
 .service-container img {
@@ -69,20 +79,11 @@ html {
   margin: auto;
 }
 
-/* .service-container.player {
-  width: 500px;
-  height: 500px;
-  border-width: 1px;
-  border-color: red;
-} */
-
 #music-player {
   position: absolute;
   top: 0;
   right: 0;
   margin: 20;
-  /* border: 1px solid red;
-  border-radius: 50%; */
 }
 
 .hidden {
@@ -194,19 +195,12 @@ img {
 .home-button {
   width: 60px;
   height: 60px;
-  /* background-color: none; */
   border-radius: 4px;
   margin: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-/* #open-modal-button {
-  background-color: rgb(192, 177, 168);
-  padding: 5px;
-  border: 0.5px solid #000000;
-} */
 
 /* Style for the close button */
 .close {
@@ -221,4 +215,42 @@ img {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.text-bg-light {
+  color: #000 !important;
+  background-color: RGBA(
+    var(--bs-light-rgb),
+    var(--bs-bg-opacity, 0.5)
+  ) !important;
+}
+
+.text-bg-dark {
+  color: #fff !important;
+  background-color: RGBA(
+    var(--bs-dark-rgb),
+    var(--bs-bg-opacity, 0.5)
+  ) !important;
+}
+
+.row {
+  flex-wrap: nowrap;
+}
+
+.card {
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.card-body {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#temperature-inside {
+  text-align: center;
+}
+
+.form-range::-webkit-slider-thumb {
+  background-color: #626060; /* Change to your desired color */
 }

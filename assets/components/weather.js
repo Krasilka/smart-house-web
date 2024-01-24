@@ -56,25 +56,25 @@ async function getCurrentCity() {
 
 // GET weather conditions by current location
 async function getCurrentWeather() {
-  // let locationResponse = await getCoords();
-  // let longitude = await locationResponse.long;
-  // let latitude = await locationResponse.lat;
+  let locationResponse = await getCoords();
+  let longitude = await locationResponse.long;
+  let latitude = await locationResponse.lat;
 
-  // let weatherObject = await fetch(
-  //   `https://api.tomorrow.io/v4/weather/realtime?location=${latitude},${longitude}&fields=temperature&apikey=${apiKey}`,
-  //   options
-  // );
+  let weatherObject = await fetch(
+    `https://api.tomorrow.io/v4/weather/realtime?location=${latitude},${longitude}&fields=temperature&apikey=${apiKey}`,
+    options
+  );
 
-  // let weatherInfo = await weatherObject.json();
-  // console.log('INSIDE getCurrentWeather');
-  // return {
-  //   temp: Math.round(weatherInfo.data.values.temperature),
-  //   weatherCode: weatherInfo.data.values.weatherCode,
-  // };
+  let weatherInfo = await weatherObject.json();
+  console.log('INSIDE getCurrentWeather');
   return {
-    temp: 20,
-    weatherCode: 1000,
+    temp: Math.round(weatherInfo.data.values.temperature),
+    weatherCode: weatherInfo.data.values.weatherCode,
   };
+  // return {
+  //   temp: 20,
+  //   weatherCode: 1000,
+  // };
 }
 
 const { temp, weatherCode } = await getCurrentWeather();
