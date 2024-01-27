@@ -8,5 +8,3 @@ const switchWater = () => water.switchService();
 waterBtn.on('click', switchWater);
 
 export { switchWater, waterBtn };
-
-// MAYBE IT SHOULD BE MOVED TO MAIN JS ?????

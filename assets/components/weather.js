@@ -56,25 +56,25 @@ async function getCurrentCity() {
 
 // GET weather conditions by current location
 async function getCurrentWeather() {
-  let locationResponse = await getCoords();
-  let longitude = await locationResponse.long;
-  let latitude = await locationResponse.lat;
+  // let locationResponse = await getCoords();
+  // let longitude = await locationResponse.long;
+  // let latitude = await locationResponse.lat;
 
-  let weatherObject = await fetch(
-    `https://api.tomorrow.io/v4/weather/realtime?location=${latitude},${longitude}&fields=temperature&apikey=${apiKey}`,
-    options
-  );
+  // let weatherObject = await fetch(
+  //   `https://api.tomorrow.io/v4/weather/realtime?location=${latitude},${longitude}&fields=temperature&apikey=${apiKey}`,
+  //   options
+  // );
 
-  let weatherInfo = await weatherObject.json();
+  // let weatherInfo = await weatherObject.json();
   console.log('INSIDE getCurrentWeather');
-  return {
-    temp: Math.round(weatherInfo.data.values.temperature),
-    weatherCode: weatherInfo.data.values.weatherCode,
-  };
   // return {
-  //   temp: 20,
-  //   weatherCode: 1000,
+  //   temp: Math.round(weatherInfo.data.values.temperature),
+  //   weatherCode: weatherInfo.data.values.weatherCode,
   // };
+  return {
+    temp: 20,
+    weatherCode: 1000,
+  };
 }
 
 const { temp, weatherCode } = await getCurrentWeather();
@@ -82,10 +82,7 @@ const city = await getCurrentCity();
 
 // GET weather description by weather code
 function getWeatherDescription(weatherCode) {
-  console.log(codes);
-
   const descrName = codes[weatherCode] || 'unknown';
-
   return descrName;
 }
 
@@ -94,8 +91,7 @@ const weatherDescription = await getWeatherDescription(weatherCode);
 // ADD weather info into HTML
 const weatherWidget = document.querySelector('#weather-container');
 
-window.onload = weatherWidget.innerHTML = `
-                            <div class="card-header text-bg-dark">Temperature outside</div>
+weatherWidget.innerHTML = `<div class="card-header text-bg-dark">Temperature outside</div>
                             <div class="card-body">
                               <h5 class="card-title">${city}</h5>
                               <p class="card-text">
