@@ -34,7 +34,6 @@ const getCoords = async () => {
   const pos = await new Promise((resolve, reject) => {
     navigator.geolocation.getCurrentPosition(resolve, reject);
   });
-  console.log('INSIDE getCoords');
   return {
     long: pos.coords.longitude,
     lat: pos.coords.latitude,
@@ -50,30 +49,24 @@ async function getCurrentCity() {
     `https://api.opencagedata.com/geocode/v1/json?key=${locationApi}&q=${latitude}+${longitude}&pretty=1`
   );
   let locationInfo = await locationObject.json();
-  console.log('INSIDE getCurrentCity');
   return locationInfo.results[0].components.city;
 }
 
 // GET weather conditions by current location
 async function getCurrentWeather() {
-  // let locationResponse = await getCoords();
-  // let longitude = await locationResponse.long;
-  // let latitude = await locationResponse.lat;
+  let locationResponse = await getCoords();
+  let longitude = await locationResponse.long;
+  let latitude = await locationResponse.lat;
 
-  // let weatherObject = await fetch(
-  //   `https://api.tomorrow.io/v4/weather/realtime?location=${latitude},${longitude}&fields=temperature&apikey=${apiKey}`,
-  //   options
-  // );
+  let weatherObject = await fetch(
+    `https://api.tomorrow.io/v4/weather/realtime?location=${latitude},${longitude}&fields=temperature&apikey=${apiKey}`,
+    options
+  );
 
-  // let weatherInfo = await weatherObject.json();
-  console.log('INSIDE getCurrentWeather');
-  // return {
-  //   temp: Math.round(weatherInfo.data.values.temperature),
-  //   weatherCode: weatherInfo.data.values.weatherCode,
-  // };
+  let weatherInfo = await weatherObject.json();
   return {
-    temp: 20,
-    weatherCode: 1000,
+    temp: Math.round(weatherInfo.data.values.temperature),
+    weatherCode: weatherInfo.data.values.weatherCode,
   };
 }
 
