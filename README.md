@@ -1,4 +1,4 @@
-#Smart House#
+# Smart House
 
 Project to control services in the house:
 - temperature level - save it to local storage
