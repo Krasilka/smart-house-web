@@ -4,7 +4,7 @@ html {
 }
 
 .bg {
-  background-image: url('mainBackground.jpeg');
+  background-image: url('/mainBackground.jpeg');
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
