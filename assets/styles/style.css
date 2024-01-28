@@ -1,11 +1,10 @@
 body,
 html {
   height: 100%;
-  background-color: red;
 }
 
 .bg {
-  /* background-image: url('/mainBackground.jpeg'); */
+  background-image: url('../images/mainBackground.jpeg');
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -26,7 +25,7 @@ html {
 }
 
 .service-container.coffee {
-  background: url('/assets/images/coffee.png') no-repeat center;
+  background: url('../images/coffee.png') no-repeat center;
   background-size: 180px;
   background-color: white;
   /* POSITIONING */
@@ -42,7 +41,7 @@ html {
   width: 220;
 }
 .service-container.wifi {
-  background: url('/assets/images/wifi.png') no-repeat center;
+  background: url('../images/wifi.png') no-repeat center;
   background-size: 180px;
   background-color: white;
   /* POSITIONING */
@@ -52,7 +51,7 @@ html {
   margin: 20;
 }
 .service-container.door {
-  background: url('/assets/images/door.png') no-repeat center;
+  background: url('../images/door.png') no-repeat center;
   background-size: 180px;
   background-color: white;
   /* POSITIONING */
@@ -68,7 +67,7 @@ html {
   width: 220;
 }
 .service-container.water {
-  background: url('/assets/images/water.png') no-repeat center;
+  background: url('../images/water.png') no-repeat center;
   background-size: 180px;
   background-color: white;
   /* POSITIONING */
@@ -84,7 +83,7 @@ html {
   width: 250;
 }
 .service-container.oven {
-  background: url('/assets/images/oven.png') no-repeat center;
+  background: url('../images/oven.png') no-repeat center;
   background-size: 180px;
   background-color: white;
   /* POSITIONING */
@@ -100,7 +99,7 @@ html {
   width: 250;
 }
 .service-container.light {
-  background: url('/assets/images/light.png') no-repeat center;
+  background: url('../images/light.png') no-repeat center;
   background-size: 180px;
   background-color: white;
   /* POSITIONING */
@@ -117,7 +116,7 @@ html {
 }
 
 .service-container.temperature {
-  background: url('/assets/images/temperature.png') no-repeat center;
+  background: url('../images/temperature.png') no-repeat center;
   background-size: 180px;
   background-color: white;
   margin-top: 5px;
@@ -181,7 +180,7 @@ html {
   border: 1px solid #000000;
   width: 350px;
   height: 280px;
-  background-image: url('/assets/images/ipad.png');
+  background-image: url('../images/ipad.png');
   background-size: 150%;
   background-repeat: no-repeat;
   background-position: center;
